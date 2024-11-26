@@ -41,6 +41,7 @@ export const BurgerConstructor: FC = () => {
     dispatch(createOrder(data));
     dispatch(resetConstructor());
   };
+
   const closeOrderModal = () => {
     dispatch(resetOrderModelData());
   };
