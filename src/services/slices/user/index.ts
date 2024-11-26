@@ -130,6 +130,7 @@ const slice = createSlice({
       .addCase(fetchUser.fulfilled, (state, action) => {
         state.data = action.payload;
         state.isAuthChecked = true;
+        state.isAuthenticated = true;
         state.requestStatus = RequestStatus.Success;
       })
       .addCase(fetchUser.rejected, (state, action) => {
