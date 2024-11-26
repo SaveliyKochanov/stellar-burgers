@@ -31,7 +31,11 @@ export const getOrderByNumber = createAsyncThunk(
 export const slice = createSlice({
   name: 'feeds',
   initialState,
-  reducers: {},
+  reducers: {
+    clearSelectedOrder: (state) => {
+      state.selectedOrder = null;
+    }
+  },
   selectors: {
     getAllFeeds: (state) => state.orders,
     getTotal: (state) => state.total,
@@ -65,4 +69,5 @@ export const {
   getSelectedFeed,
   getIsLoading
 } = slice.selectors;
+export const { clearSelectedOrder } = slice.actions;
 export default slice.reducer;

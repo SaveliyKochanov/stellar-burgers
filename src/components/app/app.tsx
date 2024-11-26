@@ -8,19 +8,20 @@ import {
   ProfileOrders,
   Register,
   ResetPassword
-} from '@pages';
-import { useEffect } from 'react';
-import { Route, Routes, useLocation, useNavigate } from 'react-router-dom';
-import '../../index.css';
-import { getIngredients } from '../../services/slices/ingredients';
-import { fetchUser } from '../../services/slices/user';
-import { useDispatch } from '../../services/store';
-import { AppHeader } from '../app-header';
-import { IngredientDetails } from '../ingredient-details';
-import { Modal } from '../modal';
-import { OrderInfo } from '../order-info';
-import { ProtectedRoute } from '../protected-route';
-import styles from './app.module.css';
+} from '@pages'
+import { useCallback, useEffect } from 'react'
+import { Route, Routes, useLocation, useNavigate } from 'react-router-dom'
+import '../../index.css'
+import { clearSelectedOrder } from '../../services/slices/feeds'
+import { getIngredients } from '../../services/slices/ingredients'
+import { fetchUser } from '../../services/slices/user'
+import { useDispatch } from '../../services/store'
+import { AppHeader } from '../app-header'
+import { IngredientDetails } from '../ingredient-details'
+import { Modal } from '../modal'
+import { OrderInfo } from '../order-info'
+import { ProtectedRoute } from '../protected-route'
+import styles from './app.module.css'
 
 const App = () => {
   const dispatch = useDispatch();
@@ -29,8 +30,13 @@ const App = () => {
 
   const background = location.state?.background;
 
+  const clearSelected = useCallback(() => {
+    dispatch(clearSelectedOrder());
+  },[dispatch])
+
   const handleModalClose = () => {
     navigate(-1);
+    clearSelected()
   };
 
   useEffect(() => {

@@ -10,11 +10,11 @@ import { Preloader } from '../ui/preloader';
 export const OrderInfo: FC = () => {
   const dispatch = useDispatch();
 
-  const { id } = useParams();
+  const { number } = useParams();
 
   useEffect(() => {
-    dispatch(getOrderByNumber(Number(id)));
-  }, [dispatch]);
+    dispatch(getOrderByNumber(Number(number)));
+  }, [dispatch, number]);
 
   const orderData = useSelector(getSelectedFeed);
   const ingredients = useSelector(getAllIngredients);

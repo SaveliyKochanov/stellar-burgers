@@ -9,6 +9,7 @@ import {
   getOrderRequest,
   resetOrderModelData
 } from '../../services/slices/orders';
+import { isAuthenticated } from '../../services/slices/user';
 import { useDispatch, useSelector } from '../../services/store';
 
 export const BurgerConstructor: FC = () => {
@@ -19,12 +20,12 @@ export const BurgerConstructor: FC = () => {
   const orderRequest = useSelector(getOrderRequest);
 
   const constructorItems = useSelector((state) => state.creator);
-  const isAuthenticated = useSelector((state) => state.user.isAuthenticated);
+  const isAuth = useSelector(isAuthenticated);
 
   const onOrderClick = () => {
     if (!constructorItems.bun || orderRequest) return;
 
-    if (!isAuthenticated) {
+    if (!isAuth) {
       return navigate('/login');
     }
 

@@ -110,6 +110,9 @@ const slice = createSlice({
     },
     userLogout: (state) => {
       state.data = null;
+    },
+    setUser: (state, action) => {
+      state.data = action.payload;
     }
   },
   selectors: {
@@ -168,8 +171,8 @@ const slice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.data = null;
-        // state.isAuthChecked = false;
-        // state.isAuthenticated = false;
+        state.isAuthChecked = false;
+        state.isAuthenticated = false;
         state.requestStatus = RequestStatus.Success;
       })
       .addCase(logoutUser.rejected, (state, action) => {
@@ -185,4 +188,5 @@ export const {
   isAuthenticated,
   getError
 } = slice.selectors;
+export const { setUser } = slice.actions;
 export default slice.reducer;
