@@ -1,13 +1,13 @@
 import { FC } from 'react';
 
 import { TOrder } from '@utils-types';
-import { useSelector } from 'react-redux';
 import {
   getAllFeeds,
   getTotal,
   getTotalToday
 } from '../../services/slices/feeds';
 import { getIsLoading } from '../../services/slices/orders';
+import { useSelector } from '../../services/store';
 import { FeedInfoUI } from '../ui/feed-info';
 import { Preloader } from '../ui/preloader';
 
@@ -24,7 +24,6 @@ export const FeedInfo: FC = () => {
     totalToday: useSelector(getTotalToday)
   };
   const isLoading = useSelector(getIsLoading);
-  console.log(isLoading);
 
   if (isLoading) {
     return <Preloader />;

@@ -1,10 +1,10 @@
 import { BurgerConstructorElementUI } from '@ui';
 import { FC, memo } from 'react';
-import { useDispatch } from 'react-redux';
 import {
   removeFromConstructor,
   reorderConstructor
 } from '../../services/slices/builder';
+import { useDispatch } from '../../services/store';
 import { BurgerConstructorElementProps } from './type';
 
 export const BurgerConstructorElement: FC<BurgerConstructorElementProps> = memo(

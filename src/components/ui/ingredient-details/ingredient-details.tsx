@@ -1,4 +1,4 @@
-import React, { FC, memo } from 'react';
+import { FC, memo } from 'react';
 import styles from './ingredient-details.module.css';
 import { IngredientDetailsUIProps } from './type';
 
@@ -9,6 +9,7 @@ export const IngredientDetailsUI: FC<IngredientDetailsUIProps> = memo(
 
     return (
       <div className={styles.content}>
+        <h2 className={`text ${styles.main__title}`}>Детали ингредиента</h2>
         <img
           className={styles.img}
           alt='изображение ингредиента.'
