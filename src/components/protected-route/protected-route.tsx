@@ -14,12 +14,13 @@ export function ProtectedRoute({ children, isPublic }: ProtectedRouteProps) {
   const user = useSelector(getUserData);
   const checkUser = useSelector(isAuthChecked);
 
-  if (!isAuthChecked) {
+  if (!checkUser && user !== null) {
     return <Preloader />;
   }
 
   if (isPublic && user) {
-    return <Navigate to='/' />;
+    const { from } = location.state || { from: { pathname: '/' } };
+    return <Navigate to={from} />;
   }
 
   if (!isPublic && !user) {
@@ -30,7 +31,7 @@ export function ProtectedRoute({ children, isPublic }: ProtectedRouteProps) {
         state={{
           from: {
             ...location,
-            backgroundLocation: location.state?.backgroundLocation,
+            background: location.state?.background,
             state: null
           }
         }}

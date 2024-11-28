@@ -147,6 +147,7 @@ const slice = createSlice({
       .addCase(registerUser.fulfilled, (state, action) => {
         state.data = action.payload;
         state.isAuthenticated = true;
+        state.isAuthChecked = true;
         state.requestStatus = RequestStatus.Success;
       })
       .addCase(registerUser.rejected, (state, action) => {
@@ -160,6 +161,7 @@ const slice = createSlice({
       .addCase(authUser.fulfilled, (state, action) => {
         state.data = action.payload;
         state.isAuthenticated = true;
+        state.isAuthChecked = true;
         state.requestStatus = RequestStatus.Success;
       })
       .addCase(authUser.rejected, (state, action) => {
@@ -172,7 +174,7 @@ const slice = createSlice({
       })
       .addCase(logoutUser.fulfilled, (state) => {
         state.data = null;
-        state.isAuthChecked = false;
+        state.isAuthChecked = true;
         state.isAuthenticated = false;
         state.requestStatus = RequestStatus.Success;
       })
