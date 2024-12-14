@@ -116,4 +116,4 @@ export const {
   getIsLoading
 } = slice.selectors;
 export const { resetOrderModelData } = slice.actions;
-export default slice.reducer;
+export const reducer = slice.reducer;

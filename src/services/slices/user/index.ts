@@ -192,4 +192,4 @@ export const {
   getError
 } = slice.selectors;
 export const { setUser } = slice.actions;
-export default slice.reducer;
+export const reducer = slice.reducer;
