@@ -129,6 +129,7 @@ describe('Настроен перехват запроса на эндпоинт
       cy.contains('p', 'Ваш заказ начали готовить').should('not.exist');
       cy.contains('h2', '60229').should('not.exist');
     });
+
     afterEach(() => {
       cy.clearCookie('token');
       window.localStorage.removeItem('token');
