@@ -2,7 +2,7 @@ import { getOrderByNumberApi, getOrdersApi, orderBurgerApi } from '@api';
 import { createAsyncThunk, createSlice } from '@reduxjs/toolkit';
 import { TOrder } from './../../../utils/types';
 
-type TOrdersState = {
+export type TOrdersState = {
   isLoading: boolean;
   orderModalData: TOrder | null;
   orderRequest: boolean;
@@ -116,4 +116,4 @@ export const {
   getIsLoading
 } = slice.selectors;
 export const { resetOrderModelData } = slice.actions;
-export const reducer = slice.reducer;
+export const ordersReducer = slice.reducer;

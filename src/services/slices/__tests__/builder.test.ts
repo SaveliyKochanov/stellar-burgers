@@ -3,12 +3,12 @@ import { TIngredient } from '@utils-types';
 import {
   TConstructorState,
   addToConstructor,
-  reducer,
+  builderReducer,
   removeFromConstructor,
   reorderConstructor
 } from '../builder';
 
-describe('тесты builder', () => {
+describe('тесты слайса builder', () => {
   test('теcт action на добавление ингредиента', () => {
     const initialState: TConstructorState = { bun: null, ingredients: [] };
 
@@ -27,7 +27,7 @@ describe('тесты builder', () => {
     };
 
     const action = addToConstructor(ingredient);
-    const newState = reducer(initialState, action);
+    const newState = builderReducer(initialState, action);
     expect(newState.ingredients).toHaveLength(1);
     expect(newState.ingredients[0]).toEqual({
       ...ingredient,
@@ -59,7 +59,7 @@ describe('тесты builder', () => {
     };
 
     const action = removeFromConstructor(0);
-    const newState = reducer(initialState, action);
+    const newState = builderReducer(initialState, action);
     expect(newState.ingredients).toHaveLength(0);
   });
 
@@ -103,7 +103,7 @@ describe('тесты builder', () => {
     };
 
     const action = reorderConstructor({ from: 0, to: 1 });
-    const newState = reducer(initialState, action);
+    const newState = builderReducer(initialState, action);
 
     expect(newState.ingredients).toEqual([
       {

@@ -16,7 +16,8 @@ const config: Config = {
 
   // Automatically clear mock calls, instances, contexts and results before every test
   moduleNameMapper: {
-    '^@api$': '<rootDir>/src/utils/burger-api.ts'
+    '^@api$': '<rootDir>/src/utils/burger-api.ts',
+    '^@utils-types$': '<rootDir>/src/utils/types'
   },
   clearMocks: true,
 
