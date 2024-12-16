@@ -1,10 +1,10 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<coverage generated="1734183371837" clover="3.2.0">
-  <project timestamp="1734183371837" name="All files">
+<coverage generated="1734352811039" clover="3.2.0">
+  <project timestamp="1734352811039" name="All files">
     <metrics statements="848" coveredstatements="585" conditionals="114" coveredconditionals="72" methods="195" coveredmethods="32" elements="1157" coveredelements="689" complexity="0" loc="848" ncloc="848" packages="7" files="9" classes="9"/>
     <package name="services">
       <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
-      <file name="store.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\store.ts">
+      <file name="store.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\store.ts">
         <metrics statements="34" coveredstatements="34" conditionals="0" coveredconditionals="0" methods="1" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -44,7 +44,7 @@
     </package>
     <package name="services.slices.builder">
       <metrics statements="53" coveredstatements="52" conditionals="5" coveredconditionals="4" methods="5" coveredmethods="4"/>
-      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\slices\builder\index.ts">
+      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\slices\builder\index.ts">
         <metrics statements="53" coveredstatements="52" conditionals="5" coveredconditionals="4" methods="5" coveredmethods="4"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>
@@ -103,7 +103,7 @@
     </package>
     <package name="services.slices.feeds">
       <metrics statements="73" coveredstatements="69" conditionals="22" coveredconditionals="12" methods="42" coveredmethods="7"/>
-      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\slices\feeds\index.ts">
+      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\slices\feeds\index.ts">
         <metrics statements="73" coveredstatements="69" conditionals="22" coveredconditionals="12" methods="42" coveredmethods="7"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="7" falsecount="10"/>
@@ -182,7 +182,7 @@
     </package>
     <package name="services.slices.ingredients">
       <metrics statements="44" coveredstatements="43" conditionals="20" coveredconditionals="10" methods="37" coveredmethods="6"/>
-      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\slices\ingredients\index.ts">
+      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\slices\ingredients\index.ts">
         <metrics statements="44" coveredstatements="43" conditionals="20" coveredconditionals="10" methods="37" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="6" falsecount="10"/>
@@ -232,7 +232,7 @@
     </package>
     <package name="services.slices.orders">
       <metrics statements="119" coveredstatements="98" conditionals="28" coveredconditionals="18" methods="42" coveredmethods="7"/>
-      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\slices\orders\index.ts">
+      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\slices\orders\index.ts">
         <metrics statements="119" coveredstatements="98" conditionals="28" coveredconditionals="18" methods="42" coveredmethods="7"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="7" falsecount="10"/>
@@ -357,7 +357,7 @@
     </package>
     <package name="services.slices.user">
       <metrics statements="196" coveredstatements="150" conditionals="20" coveredconditionals="19" methods="16" coveredmethods="2"/>
-      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\services\slices\user\index.ts">
+      <file name="index.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\services\slices\user\index.ts">
         <metrics statements="196" coveredstatements="150" conditionals="20" coveredconditionals="19" methods="16" coveredmethods="2"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="1" falsecount="0"/>
@@ -559,7 +559,7 @@
     </package>
     <package name="utils">
       <metrics statements="329" coveredstatements="139" conditionals="19" coveredconditionals="9" methods="52" coveredmethods="6"/>
-      <file name="burger-api.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\utils\burger-api.ts">
+      <file name="burger-api.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\utils\burger-api.ts">
         <metrics statements="235" coveredstatements="87" conditionals="18" coveredconditionals="8" methods="49" coveredmethods="6"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="cond" truecount="7" falsecount="10"/>
@@ -797,7 +797,7 @@
         <line num="234" count="0" type="stmt"/>
         <line num="235" count="0" type="stmt"/>
       </file>
-      <file name="cookie.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\utils\cookie.ts">
+      <file name="cookie.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\utils\cookie.ts">
         <metrics statements="47" coveredstatements="5" conditionals="0" coveredconditionals="0" methods="3" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="0" type="stmt"/>
@@ -847,7 +847,7 @@
         <line num="46" count="0" type="stmt"/>
         <line num="47" count="0" type="stmt"/>
       </file>
-      <file name="types.ts" path="C:\Users\FashionKilla\Desktop\Yandex\stellar-burgers\src\utils\types.ts">
+      <file name="types.ts" path="C:\Users\FashionKilla\Desktop\stellar-burgers\src\utils\types.ts">
         <metrics statements="47" coveredstatements="47" conditionals="1" coveredconditionals="1" methods="0" coveredmethods="0"/>
         <line num="1" count="1" type="stmt"/>
         <line num="2" count="1" type="stmt"/>

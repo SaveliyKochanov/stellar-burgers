@@ -1,15 +1,25 @@
 import { describe, test } from '@jest/globals';
-import { feedsReducer, getFeeds } from '../feeds';
+import { feedsReducer, getFeeds, initialState } from '../feeds';
 
 describe('тесты слайса feeds', () => {
-  const initialState = {
-    orders: [],
-    total: 0,
-    totalToday: 0,
-    selectedOrder: null,
-    isLoading: false
+  const feedsPayload = {
+    orders: [
+      {
+        isLoading: false,
+        orderModalData: null,
+        orderRequest: false,
+        data: null
+      },
+      {
+        isLoading: false,
+        orderModalData: null,
+        orderRequest: false,
+        data: null
+      }
+    ],
+    total: 200,
+    totalToday: 100
   };
-
   test('теcт getFeeds.pending', () => {
     const action = { type: getFeeds.pending.type };
     const newState = feedsReducer(initialState, action);
@@ -21,25 +31,6 @@ describe('тесты слайса feeds', () => {
   });
 
   test('теcт getFeeds.fulfilled', () => {
-    const feedsPayload = {
-      orders: [
-        {
-          isLoading: false,
-          orderModalData: null,
-          orderRequest: false,
-          data: null
-        },
-        {
-          isLoading: false,
-          orderModalData: null,
-          orderRequest: false,
-          data: null
-        }
-      ],
-      total: 200,
-      totalToday: 100
-    };
-
     const action = {
       type: getFeeds.fulfilled.type,
       payload: feedsPayload

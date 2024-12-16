@@ -1,21 +1,15 @@
 import { describe, test } from '@jest/globals';
 import { RequestStatus, TUser } from '@utils-types';
 import {
-  TUserState,
   authUser,
   fetchUser,
+  initialState,
   logoutUser,
   registerUser,
   userReducer
 } from '../user';
 
 describe('тесты слайса user', () => {
-  const initialState: TUserState = {
-    isAuthChecked: false,
-    isAuthenticated: false,
-    data: null,
-    requestStatus: RequestStatus.Idle
-  };
   describe('тесты fetchUser', () => {
     test('теcт fetchUser.pending', () => {
       const action = { type: fetchUser.pending.type };

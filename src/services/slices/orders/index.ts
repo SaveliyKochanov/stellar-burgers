@@ -9,7 +9,7 @@ export type TOrdersState = {
   data: TOrder[];
 };
 
-const initialState: TOrdersState = {
+export const initialState: TOrdersState = {
   isLoading: false,
   orderModalData: null,
   orderRequest: false,

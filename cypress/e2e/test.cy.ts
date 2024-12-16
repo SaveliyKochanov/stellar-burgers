@@ -1,9 +1,11 @@
+import { BASE_URL, testUrl } from '../../src/utils/constants';
+
 describe('Настроен перехват запроса на эндпоинт "api/ingredients"', () => {
   beforeEach(() => {
-    cy.intercept('GET', 'https://norma.nomoreparties.space/api/ingredients', {
+    cy.intercept('GET', `${BASE_URL}/ingredients`, {
       fixture: 'ingredients'
     });
-    cy.visit('http://localhost:5173/');
+    cy.visit(`${testUrl}`);
   });
   describe('тесты страницы сбора бургера', () => {
     it('проверка добавления одного ингредиента при нажатии на кнопку', () => {
@@ -85,11 +87,11 @@ describe('Настроен перехват запроса на эндпоинт
 
   describe('тесты на создание заказа', () => {
     beforeEach(() => {
-      cy.intercept('GET', 'https://norma.nomoreparties.space/api/auth/user', {
+      cy.intercept('GET', `${BASE_URL}/auth/user`, {
         fixture: 'user.json'
       });
 
-      cy.intercept('POST', 'https://norma.nomoreparties.space/api/orders', {
+      cy.intercept('POST', `${BASE_URL}/orders`, {
         fixture: 'order.json'
       }).as('createOrder');
 

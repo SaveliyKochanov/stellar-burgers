@@ -4,14 +4,47 @@ import {
   TConstructorState,
   addToConstructor,
   builderReducer,
+  initialState,
   removeFromConstructor,
   reorderConstructor
 } from '../builder';
 
+const reorderTestState: TConstructorState = {
+  bun: null,
+  ingredients: [
+    {
+      _id: '643d69a5c3f7b9001cfa093e',
+      name: 'Филе Люминесцентного тетраодонтимформа',
+      type: 'main',
+      proteins: 44,
+      fat: 26,
+      carbohydrates: 85,
+      calories: 643,
+      price: 988,
+      image: 'https://code.s3.yandex.net/react/code/meat-03.png',
+      image_mobile: 'https://code.s3.yandex.net/react/code/meat-03-mobile.png',
+      image_large: 'https://code.s3.yandex.net/react/code/meat-03-large.png',
+      id: 'id'
+    },
+    {
+      _id: '643d69a5c3f7b9001cfa0941',
+      name: 'Биокотлета из марсианской Магнолии',
+      type: 'main',
+      proteins: 420,
+      fat: 142,
+      carbohydrates: 242,
+      calories: 4242,
+      price: 424,
+      image: 'https://code.s3.yandex.net/react/code/meat-01.png',
+      image_mobile: 'https://code.s3.yandex.net/react/code/meat-01-mobile.png',
+      image_large: 'https://code.s3.yandex.net/react/code/meat-01-large.png',
+      id: 'id2'
+    }
+  ]
+};
+
 describe('тесты слайса builder', () => {
   test('теcт action на добавление ингредиента', () => {
-    const initialState: TConstructorState = { bun: null, ingredients: [] };
-
     const ingredient: TIngredient = {
       _id: '643d69a5c3f7b9001cfa093e',
       name: 'Филе Люминесцентного тетраодонтимформа',
@@ -64,46 +97,8 @@ describe('тесты слайса builder', () => {
   });
 
   test('тест action на изменение порядка ингредиентов в начинке', () => {
-    const initialState: TConstructorState = {
-      bun: null,
-      ingredients: [
-        {
-          _id: '643d69a5c3f7b9001cfa093e',
-          name: 'Филе Люминесцентного тетраодонтимформа',
-          type: 'main',
-          proteins: 44,
-          fat: 26,
-          carbohydrates: 85,
-          calories: 643,
-          price: 988,
-          image: 'https://code.s3.yandex.net/react/code/meat-03.png',
-          image_mobile:
-            'https://code.s3.yandex.net/react/code/meat-03-mobile.png',
-          image_large:
-            'https://code.s3.yandex.net/react/code/meat-03-large.png',
-          id: 'id'
-        },
-        {
-          _id: '643d69a5c3f7b9001cfa0941',
-          name: 'Биокотлета из марсианской Магнолии',
-          type: 'main',
-          proteins: 420,
-          fat: 142,
-          carbohydrates: 242,
-          calories: 4242,
-          price: 424,
-          image: 'https://code.s3.yandex.net/react/code/meat-01.png',
-          image_mobile:
-            'https://code.s3.yandex.net/react/code/meat-01-mobile.png',
-          image_large:
-            'https://code.s3.yandex.net/react/code/meat-01-large.png',
-          id: 'id2'
-        }
-      ]
-    };
-
     const action = reorderConstructor({ from: 0, to: 1 });
-    const newState = builderReducer(initialState, action);
+    const newState = builderReducer(reorderTestState, action);
 
     expect(newState.ingredients).toEqual([
       {

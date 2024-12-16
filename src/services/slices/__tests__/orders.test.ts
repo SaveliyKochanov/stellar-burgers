@@ -4,17 +4,13 @@ import {
   createOrder,
   getOrder,
   getOrders,
+  initialState,
   ordersReducer
 } from '../orders';
 import { TOrder } from './../../../utils/types';
 
 describe('тесты слайса orders', () => {
-  const initialState: TOrdersState = {
-    isLoading: false,
-    orderModalData: null,
-    orderRequest: false,
-    data: []
-  };
+  
 
   describe('тесты getOrders', () => {
     test('теcт getOrders.pending', () => {
