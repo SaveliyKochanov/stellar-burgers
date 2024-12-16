@@ -10,7 +10,7 @@ type TFeedState = {
   isLoading: boolean;
 };
 
-const initialState: TFeedState = {
+export const initialState: TFeedState = {
   orders: [],
   total: 0,
   totalToday: 0,
@@ -70,4 +70,4 @@ export const {
   getIsLoading
 } = slice.selectors;
 export const { clearSelectedOrder } = slice.actions;
-export default slice.reducer;
+export const feedsReducer = slice.reducer;

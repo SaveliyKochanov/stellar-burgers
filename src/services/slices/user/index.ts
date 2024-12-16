@@ -14,7 +14,8 @@ import {
 } from '@reduxjs/toolkit';
 import { deleteCookie, setCookie } from '../../../utils/cookie';
 import { RequestStatus, TUser } from '../../../utils/types';
-type TUserState = {
+
+export type TUserState = {
   isAuthChecked: boolean;
   isAuthenticated: boolean;
   data: TUser | null;
@@ -192,4 +193,4 @@ export const {
   getError
 } = slice.selectors;
 export const { setUser } = slice.actions;
-export default slice.reducer;
+export const userReducer = slice.reducer;
